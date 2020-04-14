@@ -1,0 +1,16 @@
+{
+  "name": "go-gorm-sample",
+  "version": "0.0.1",
+  "main": "",
+  "repository": "git@github.com:tomtwinkle/go-gorm-sample.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm stop && npm run build && docker-compose up -d --build",
+    "build": "cd cmd && cross-env GOOS=linux GOARCH=amd64 go build -tags debug",
+    "stop": "docker-compose down"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "npm-run-all": "^4.1.5"
+  }
+}
